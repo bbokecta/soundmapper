@@ -2,3 +2,4 @@ venv/
 spotify_keys.json
 .ipynb_checkpoints
 ticketmaster_keys.txt
+geocode_keys.txt
