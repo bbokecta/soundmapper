@@ -6,15 +6,22 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 	<title>SoundMapper</title>
 </head>
-<body>
+<body height="100%">
     <h1>Spotify x SoundMapper</h1>
     <form method="POST">
-        <label>Year:</label>
-        <input name=req_year type="text" value={{year}}><br><br>
+        <label>Enter your origin:</label>
+        <input name=req_add1 type="text" value={{address1}}><br><br>
+        <label>Enter your destination:</label>
+        <input name=req_add2 type="text" value={{address2}}><br><br>
+        <label>Enter your genre:</label>
+        <input name=req_genre type="text" value={{genre}}><br><br>
         <input type="submit" value="Submit!"><br><br>
     </form>
-    {% for song in songs %}
-        <p>{{song}}</p>
-    {% endfor %}
+    <iframe style="border-radius:12px" 
+    src="https://open.spotify.com/embed/playlist/{{playlist_id}}?utm_source=generator" 
+    width="80%" height="800" frameBorder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+</iframe>
 </body>
 </html>
