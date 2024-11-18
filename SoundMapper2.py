@@ -1,6 +1,5 @@
 import spotipy
 import json
-import webbrowser
 import urllib.request
 import spotipy.util as util
 import pygeohash as pgh
@@ -94,7 +93,7 @@ def get_more_songs(address1, address2, user_genre):
 
     while len(all_events) < 3:
         radius *= 4
-        time.sleep(5)
+        time.sleep(5) #trying to get around the 429 Too Many Requests error
         all_events.update(get_all_events(radius))
 
     #getting the names of each event's musician
@@ -117,7 +116,7 @@ def get_more_songs(address1, address2, user_genre):
     genre_name = list(genre_list.keys())[list(genre_list.values()).index(genreID)]
 
     #adding each song to the playlist
-    empty_playlist = sp.user_playlist_create(user=username, name=f"Journey from {address1.upper()} to {address2.upper()}", public=True, description=f"{genre_name} artists who've played recently anywhere within a {radius} {unit} radius of {address1.upper()} and {address2.upper()}")
+    empty_playlist = sp.user_playlist_create(user=username, name=f"{genre_name} journey from {address1.upper()} to {address2.upper()}", public=True, description=f"{genre_name} artists who've played recently anywhere within a {radius} {unit} radius of {address1.upper()} and {address2.upper()}")
     sp.user_playlist_add_tracks(username, empty_playlist['id'], playlist_songs)
 
     my_playlistID = empty_playlist['id']

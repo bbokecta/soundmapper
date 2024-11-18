@@ -21,4 +21,5 @@ def index_post():
     user_address2 = request.form['req_add2']
     user_genre = request.form['req_genre']
     my_playlistID = get_more_songs(user_address1, user_address2, user_genre)
+    # print(user_genre)
     return render_template('index.html', address1=user_address1, address2=user_address2, genre=user_genre, playlist_id=my_playlistID)
