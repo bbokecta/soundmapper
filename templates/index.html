@@ -9,28 +9,32 @@
 </head>
 <body height="100%">
     <h1>Spotify x SoundMapper</h1>
-    <form method="POST">
-        <label>Enter your origin:</label>
-        <input name=req_add1 type="text" value={{address1}}><br><br>
-        <label>Enter your destination:</label>
-        <input name=req_add2 type="text" value={{address2}}><br><br>
-        <label>Select your genre:</label>
-        <input name=req_genre type="radio" id="pop" value='pop'>
-        <label for="pop">Pop</label>
-        <input name=req_genre type="radio" id="electronic"  value='electronic'>
-        <label for="electronic">Electronic</label>
-        <input name=req_genre type="radio" id="rock" value='rock'>
-        <label for="rock">Rock</label>
-        <input name=req_genre type="radio" id="classical"  value='classical'>
-        <label for="classical">Classical</label>
-        <input name=req_genre type="radio" id="rap" value='rap'>
-        <label for="rap">Rap</label>
-        <input name=req_genre type="radio" id="country"  value='country'>
-        <label for="country">Country</label>
-        <br><br>
+    <div>
+        <form method="POST">
+            <label>Enter your origin:</label>
+            <br>
+            <input name=req_add1 type="text" value={{address1}}><br><br>
+            <label>Enter your destination:</label>
+            <br>
+            <input name=req_add2 type="text" value={{address2}}><br><br>
+            <label>Select your genre:</label>
+            <input name=req_genre type="radio" id="pop" value='pop'>
+            <label for="pop">Pop</label>
+            <input name=req_genre type="radio" id="electronic"  value='electronic'>
+            <label for="electronic">Electronic</label>
+            <input name=req_genre type="radio" id="rock" value='rock'>
+            <label for="rock">Rock</label>
+            <input name=req_genre type="radio" id="classical"  value='classical'>
+            <label for="classical">Classical</label>
+            <input name=req_genre type="radio" id="rap" value='rap'>
+            <label for="rap">Rap</label>
+            <input name=req_genre type="radio" id="country"  value='country'>
+            <label for="country">Country</label>
+            <br><br>
 
-        <input type="submit" value="Submit!"><br><br>
-    </form>
+            <input type="submit" value="Generate Playlist!"><br><br>
+        </form>    
+    </div>
     <!-- <iframe style="border-radius:12px" 
     src="https://open.spotify.com/embed/playlist/{{playlist_id}}?utm_source=generator" 
     width="80%" height="600" frameBorder="0" allowfullscreen="" 
