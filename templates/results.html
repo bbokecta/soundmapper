@@ -6,6 +6,11 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
 	<title>SoundMapper</title>
+    <!-- <style>
+        body {
+            font-family: 'DM Sans';font-size: 22px; font-weight: 'bold';
+        }
+        </style> -->
 </head>
 <body height="100%">
     <h1>Spotify x SoundMapper</h1>
@@ -29,13 +34,17 @@
         <label for="country">Country</label>
         <br><br>
 
+        <!-- <input type="radio" id="pop" name=req_genre value={{genre}}>
+        <label for="pop">Pop</label>
+        <input type="radio" id="electronic" name=req_genre value={{genre}}>
+        <label for="electronic">Electronic</label><br><br> -->
         <input type="submit" value="Submit!"><br><br>
     </form>
-    <!-- <iframe style="border-radius:12px" 
+    <iframe style="border-radius:12px" 
     src="https://open.spotify.com/embed/playlist/{{playlist_id}}?utm_source=generator" 
     width="80%" height="600" frameBorder="0" allowfullscreen="" 
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-    loading="lazy"> -->
+    loading="lazy">
 </iframe>
 </body>
 </html>

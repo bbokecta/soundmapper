@@ -13,13 +13,13 @@ default_user_genre = "rock"
 @app.route('/')
 def index():
     my_playlistID = get_more_songs(default_address1, default_address2, default_user_genre)
-    return render_template('index.html', address1=default_address1, address2=default_address2, genre=default_user_genre, playlist_id=my_playlistID)
+    return render_template('index.html')
 
 @app.route('/', methods=['POST'])
 def index_post():
     user_address1 = request.form['req_add1']
     user_address2 = request.form['req_add2']
-    user_genre = request.form['req_genre']
+    user_genre = request.form.get('req_genre')
     my_playlistID = get_more_songs(user_address1, user_address2, user_genre)
     # print(user_genre)
-    return render_template('index.html', address1=user_address1, address2=user_address2, genre=user_genre, playlist_id=my_playlistID)
+    return render_template('results.html', address1=user_address1, address2=user_address2, genre=user_genre, playlist_id=my_playlistID)

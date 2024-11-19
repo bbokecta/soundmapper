@@ -1,10 +1,14 @@
 body {
 	background-color: #121212;
-	font-family: 'DM Sans';font-size: 22px;
+	font-family: 'DM Sans'; font-size: 22px; font-weight: 900;
+	vertical-align: middle;
+	margin: auto;
 }
 
 h1 {
-    color: #1ED760
+    color: #1ED760;
+	font-size: 120px; font-weight: bolder;
+	margin-bottom: 20px;
 }
 
 label {
